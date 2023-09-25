@@ -1,0 +1,617 @@
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^dz-(.*)": "@/components/dz-$1/dz-$1.vue"
+		}
+	},
+	"pages": [{
+			"path": "pages/main/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "none",
+					"pullToRefresh": {
+						"support": true,
+						"color": "#E80F2E"
+					}
+				}
+			}
+		},  {
+			"path": "pages/main/poster/poster",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "none",
+					"pullToRefresh": {
+						"support": true,
+						"color": "#E80F2E"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/main/material/material",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "none",
+					"pullToRefresh": {
+						"support": true,
+						"color": "#E80F2E"
+					}
+				}
+			}
+		}, {
+			"path": "pages/main/cart/cart",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "none",
+					"pullToRefresh": {
+						"support": true,
+						"color": "#E80F2E"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/notFound/404",
+			"style": {
+				"navigationBarTitleText": "Not Found"
+			},
+			"meta": {
+				"ignoreAuth": true
+			}
+		}
+	],
+
+	"subPackages": [{
+			"root": "pages/public",
+			"pages": [{
+				"path": "search/search",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "notice/index",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": true,
+					"onReachBottomDistance": 50,
+					"app-plus": {
+						"bounce": "none",
+						"pullToRefresh": {
+							"support": true,
+							"color": "#E80F2E"
+						}
+					}
+				}
+			}, {
+				"path": "notice/detail",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "vedio/vedio",
+				"style": {
+					"navigationBarTitleText": "",
+					"navigationStyle": "default"
+				}
+			}, {
+				"path": "webview/webview",
+				"style": {
+					"navigationBarTitleText": "",
+					"navigationStyle": "default"
+				}
+			}]
+		}, {
+			"root": "pages/login",
+			"pages": [{
+				"path": "login/login",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}, {
+				"path": "code/code",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			},  {
+				"path": "mobileRegister/mobileRegister",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "modifyMobileStep/index1",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "modifyMobileStep/index2",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}]
+		}, {
+			"root": "pages/common",
+			"pages": [{
+				"path": "protocol/protocol",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}, {
+				"path": "protocol/detail",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}]
+		}, {
+			"root": "pages/order",
+			"pages": [{
+					"path": "create/create",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+
+				{
+					"path": "index/index",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				},
+				{
+					"path": "detail/detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "productExpressDetails/productExpressDetails",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "refund/index",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				},
+				{
+					"path": "refund/refund",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "refund/list",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}, {
+					"path": "refund/detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "refund/shipping/shipping",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "refund/apply",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "pay/pay",
+					"style": {}
+				},
+				{
+					"path": "pay/aliMiddle",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": false
+					}
+
+				}
+			]
+		},
+		{
+			"root": "pages/notice",
+			"pages": [{
+				"path": "fail/index",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}, {
+				"path": "success/index",
+				"style": {
+					"navigationBarTitleText": ""
+				},
+				"meta": {
+					"ignoreAuth": true
+				}
+			}, {
+				"path": "paySuccess/paySuccess",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "payComplete/payComplete",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		},
+		{
+			"root": "pages/user",
+			"pages": [{
+				"path": "bankAccount/bankAccount",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": true,
+					"onReachBottomDistance": 50,
+					"app-plus": {
+						"bounce": "none",
+						"titleNView": false,
+						"pullToRefresh": {
+							"support": true,
+							"color": "#E80F2E"
+						}
+					}
+				}
+			}, {
+				"path": "bankAccount/update",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}, {
+				"path": "brokerage/brokerage",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": true,
+					"onReachBottomDistance": 50,
+					"app-plus": {
+						"bounce": "none",
+						"titleNView": false,
+						"pullToRefresh": {
+							"support": true,
+							"color": "#E80F2E"
+						}
+					}
+						}
+					}, {
+						"path": "brokerage/index",
+						"style": {
+							"navigationBarTitleText": "",
+							"enablePullDownRefresh": true,
+							"onReachBottomDistance": 50,
+							"app-plus": {
+								"bounce": "none",
+								"titleNView": false,
+								"pullToRefresh": {
+									"support": true,
+									"color": "#E80F2E"
+								}
+							}
+						}
+					}, {
+						"path": "brokerage/create",
+						"style": {
+							"navigationBarTitleText": ""
+						}
+					},{
+					"path": "brokerage/log",
+					"style": {
+				 		"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				}, 
+				{
+					"path": "set/set",
+					"style": {
+						"navigationBarTitleText": ""
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				}, {
+					"path": "userInfo/userInfo",
+					"style": {
+						"navigationBarTitleText": ""
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				}, {
+					"path": "invoice/invoice",
+					"style": {
+						"navigationBarTitleText": "",
+						"onReachBottomDistance": 50
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				}, {
+					"path": "invoice/update",
+					"style": {
+						"navigationBarTitleText": ""
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				}, {
+					"path": "invoice/orderInvoice",
+					"style": {
+						"navigationBarTitleText": "",
+						"onReachBottomDistance": 50
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				},  {
+					"path": "address/address",
+					"style": {
+						"navigationBarTitleText": "",
+						"onReachBottomDistance": 50
+					}
+				}, {
+					"path": "address/update",
+					"style": {
+						"navigationBarTitleText": "",
+						"onReachBottomDistance": 50
+					}
+				}, {
+					"path": "loading/loading",
+					"style": {
+						"navigationBarTitleText": ""
+					},
+					"meta": {
+						"ignoreAuth": true
+					}
+				}, {
+					"path": "notify/index/index",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				},
+				{
+					"path": "notify/notify/notify",
+					"onReachBottomDistance": 50,
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},  {
+					"path": "setPayPassword/setPayPassword",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},{
+					"path": "yunzhanghu/memberExempted/memberExempted",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}, {
+					"path": "yunzhanghu/memberSign/memberSign",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}, {
+					"path": "yunzhanghu/card/card",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				}, {
+					"path": "yunzhanghu/card/update",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},{
+					"path": "yunhuotec/memberSign/memberSign",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}, {
+					"path": "yunhuotec/card/card",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				}, {
+					"path": "yunhuotec/card/update",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}, {
+					"path": "promotion/promotion",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				},  {
+					"path": "promoterRecord/promoterRecord",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				},  {
+					"path": "qrcode/qrcode",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}]
+		},
+		{
+			"root": "pages/product",
+			"pages": [{
+					"path": "detail/detail",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "list/list",
+					"style": {
+						"navigationBarTitleText": "",
+						"enablePullDownRefresh": true,
+						"onReachBottomDistance": 50,
+						"app-plus": {
+							"bounce": "none",
+							"titleNView": false,
+							"pullToRefresh": {
+								"support": true,
+								"color": "#E80F2E"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/guide",
+			"pages": [{
+				"path": "guide",
+				"style": {
+					"navigationBarTitleText": ""
+				}
+			}]
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationStyle": "custom",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#474747",
+		"selectedColor": "#9BC6FC",
+		"backgroundColor": "#FFFFFF",
+		"height": "0px",
+		"list": [{
+			"pagePath": "pages/main/index/index",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/main/material/material",
+			"text": "物料"
+		}, {
+			"pagePath": "pages/main/poster/poster",
+			"text": "海报"
+		}, {
+			"pagePath": "pages/main/cart/cart",
+			"text": "购物车"
+		}]
+
+	}
+}
