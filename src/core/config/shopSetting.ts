@@ -132,6 +132,8 @@ class Setting {
 		// 验证码短信
 		this.sms_code_length = 4; //短信验证码长度
 		this.sms_strategies = 0; //多网关发送策略 0顺序发送 1随机发送
+		
+		this.dealer_brokerage_withdraw_enabled = 1; // 提现
 	}
 }
 

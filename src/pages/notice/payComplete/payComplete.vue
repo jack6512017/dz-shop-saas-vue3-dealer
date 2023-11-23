@@ -82,7 +82,7 @@ const shopSetting = computed(() => {
 });
 
 const hasLogin = computed(() => {
-	return userStore.getHasLogin;
+	return userStore.hasLogin;
 });
 
 const theme = computed(() => {

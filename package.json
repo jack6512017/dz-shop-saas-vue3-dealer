@@ -1,6 +1,6 @@
 {
-	"name": "dz-shop-app",
-	"version": "2.8.0",
+	"name": "dz-shop-saas-dealer",
+	"version": "2.8.5",
 	"scripts": {
 		"dev:app": "uni -p app",
 		"dev:custom": "uni -p",

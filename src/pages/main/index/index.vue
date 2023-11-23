@@ -194,7 +194,7 @@
 						<text class="grid-item-text">地址</text>
 					</view>
 				</dz-grid-item>
-				<dz-grid-item customStyle="padding-bottom: 15px" @click="withdrawClick()">
+				<dz-grid-item v-if="parseInt(shopSetting.dealer_brokerage_withdraw_enabled) === 1" customStyle="padding-bottom: 15px" @click="withdrawClick()">
 					<view class="grid-item">
 						<view class="icon-bg">
 							<view><dz-icon name="sponsor" size="50"></dz-icon></view>
@@ -303,7 +303,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, toRefs, computed } from 'vue';
+import { ref, reactive, toRefs, computed, watch } from 'vue';
 import { onLoad, onShow, onShareAppMessage, onShareTimeline, onPullDownRefresh, onUnload } from '@dcloudio/uni-app';
 import { useGroup } from '@/hooks/group';
 import tabbarConfig from '@/core/config/tabbarConfig';
@@ -386,10 +386,8 @@ onLoad(async (options) => {
 		userStore.setDealerCode(options.dealer_code);
 	}
 
-	//初始化小程序分享
-	data.mpShare.title = shopSetting.value.product_share_title;
-	data.mpShare.path = sharePath();
-	data.mpShare.imageUrl = shopSetting.value.store_logo || uni.$api.assetsConfig.logo;
+	//分享
+	updateShare();
 
 	// #ifdef APP-PLUS
 	setTimeout(
@@ -440,6 +438,21 @@ onShareTimeline(() => {
 onUnload(() => {
 	uni.$off(['yunzhanghuMemberChange']);
 });
+
+watch(
+	() => userStore.hasLogin,
+	() => {
+		updateShare();
+	}
+);
+
+//更新分享
+function updateShare() {
+	//初始化小程序分享
+	data.mpShare.title = shopSetting.value.product_share_title;
+	data.mpShare.path = sharePath();
+	data.mpShare.imageUrl = shopSetting.value.store_logo || uni.$api.assetsConfig.logo;
+}
 
 //刷新TOKEN
 async function handleVerifyAccessToken() {

@@ -47,15 +47,15 @@
 			<view style="width: 90%">
 				<!-- 立即提现 -->
 				<dz-button
-					:disabled="parseInt(withdrawConfig.dealer_brokerage_withdraw_is_open) == 0"
-					:custom-style="{ width: '100%', background: theme.dzBaseColor, color: theme.dzBaseFontColor }"
+					:disabled="parseInt(shopSetting.dealer_brokerage_withdraw_enabled) === 0"
+					:custom-style="{ width: '100%', background: parseInt(shopSetting.dealer_brokerage_withdraw_enabled) === 0 ? theme.dzBaseDisabled : theme.dzBaseColor, color: theme.dzBaseFontColor }"
 					hover-class="none"
 					shape="circle"
 					:border="false"
 					@click="withdrawClick"
 				>
 					{{
-						parseInt(withdrawConfig.dealer_brokerage_withdraw_is_open) == 0
+						parseInt(shopSetting.dealer_brokerage_withdraw_enabled) === 0
 							? '提现已暂时关闭'
 							: '立即提现'
 					}}
@@ -100,6 +100,7 @@ const theme = computed(() => {
 const userInfo = computed(() => {
 	return userStore.getUserInfo;
 });
+const shopSetting = computed(() => userStore.getShopSetting);
 
 const data = reactive({
 	withdrawConfig: null,

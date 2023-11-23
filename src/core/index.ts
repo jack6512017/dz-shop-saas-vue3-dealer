@@ -71,6 +71,5 @@ uni.$onLaunched = new Promise((resolve) => {
 export default {
 	install: (app: App) => {
 		app.config.globalProperties.api = $api;
-		app.config.globalProperties.api = $api;
 	},
 };

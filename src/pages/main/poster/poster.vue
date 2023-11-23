@@ -81,7 +81,7 @@ const shopSetting = computed(() => {
 });
 
 const hasLogin = computed(() => {
-	return userStore.getHasLogin;
+	return userStore.hasLogin;
 });
 
 const tabbarList = computed(() => {
@@ -255,7 +255,7 @@ async function shareFc(item) {
 			val: bg,
 			x: 0,
 			y: 0,
-			width: parseInt(item.cover_width),
+			width: parseInt(item.cover_width) / 2,
 			mode: 'widthFix',
 			zIndex: 0,
 		});

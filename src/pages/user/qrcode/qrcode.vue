@@ -29,7 +29,7 @@
 						</view>
 					</view>
 					<view class="cord_img">
-						<image @longpress="long" :src="imgSrc" mode=""></image>
+						<image @longpress="long" :src="imgSrc" mode="" :show-menu-by-longpress="true"></image>
 						<view class="code_tip">长按保存二维码</view>
 					</view>
 				</view>
@@ -60,7 +60,6 @@ import uQRCode from '@/core/utils/uqrcode';
 const userStore = useUserStore();
 const groupData = useGroup();
 const proxy = getCurrentInstance();
-const logo = uni.$api.assetsConfig.logo;
 
 const userInfo = computed(() => {
 	return userStore.getUserInfo;
@@ -71,7 +70,7 @@ const shopSetting = computed(() => {
 });
 
 const hasLogin = computed(() => {
-	return userStore.getHasLogin;
+	return userStore.hasLogin;
 });
 
 const theme = computed(() => {
@@ -80,6 +79,7 @@ const theme = computed(() => {
 
 const merchantCode = computed(() => userStore.getMerchantCode);
 
+const logo = shopSetting.value.store_logo || uni.$api.assetsConfig.logo;
 const data = reactive({
 	code: userInfo.value.dealer_code,
 	imgSrc: '',
@@ -212,7 +212,7 @@ function saveImg() {
 		});
 	} else {
 		uni.saveImageToPhotosAlbum({
-			filePath: this.imgSrc,
+			filePath: data.imgSrc,
 			success() {
 				uni.$api.toast('已保存到您的手机相册');
 			},
@@ -225,6 +225,9 @@ function saveImg() {
 }
 
 function long() {
+	// #ifdef MP-WEIXIN
+	return;
+	// #endif
 	uni.showActionSheet({
 		itemList: ['保存到手机'],
 		itemColor: '#0081FF',
